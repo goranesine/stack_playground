@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Okreni kartice'),
+      home: MyHomePage(title: 'Okreni kartice ;-) jeeej!'),
     );
   }
 }
@@ -44,28 +44,32 @@ class _MyHomePageState extends State<MyHomePage> {
            Row(
              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
              children: <Widget>[
-                   AnimatedOpacity(
-                     opacity: !_visible ? 1.0 : 0.0,
-                     duration: Duration(milliseconds: 500),
+                     Card(elevation: 30.0,
+                       child: AnimatedOpacity(
+                       opacity: !_visible ? 1.0 : 0.0,
+                       duration: Duration(milliseconds: 500),
 
 
-                     child: Container(
+                       child: Container(
 
                    width: 100,
                    height: 100,
                    color: Colors.green,
                  ),
                ),
-               AnimatedOpacity(
-                 opacity: _visible ? 1.0 : 0.0,
-                 duration: Duration(milliseconds: 500),
+                     ),
+               Card(elevation: 30.0, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)) ,
+                 child: AnimatedOpacity(
+                   opacity: _visible ? 1.0 : 0.0,
+                   duration: Duration(milliseconds: 500),
 
 
-                 child: Container(
+                   child: Container(
 
-                   width: 100,
-                   height: 100,
-                   color: Colors.red,
+                     width: 100,
+                     height: 100,
+                     color: Colors.red,
+                   ),
                  ),
                ),
                AnimatedOpacity(
